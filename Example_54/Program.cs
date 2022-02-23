@@ -17,11 +17,10 @@ for(int i = 0; i < n; i++)
 }
 Console.WriteLine();
 int summ = 0;
-for(int i = 0; i < n; i++)
+int size = k;
+if (n < k) size = n;
+for(int i = 0; i < size; i++)
 {
-    for(int j = 0; j < k; j++)
-    {
-        if (i == j) summ += array[i,j];   
-    }   
+     summ += array[i,i];   
 }
  Console.Write($"Сумма элементов главной диагонали равна: {summ}");  
